@@ -1,2 +1,2 @@
 #!/bin/bash
-find * -executable | grep \/ | xargs rm
+find * -executable -type f| grep \/ | xargs rm

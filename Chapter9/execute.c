@@ -14,7 +14,7 @@ int execute(char *argv[])
  */
 {
 	int pid;
-	int chiuld_info = -1;
+	int child_info = -1;
 
 	if(argv[0] == NULL)		/* nothing succeeds */
 		return 0;

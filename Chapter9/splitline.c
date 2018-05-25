@@ -21,10 +21,10 @@ char *next_cmd(char *prompt, FILE *fp)
 	char *buf;				/* the buffer */
 	int bufspace = 0;			/* total size */
 	int pos = 0;				/* current position */
-	int c;					/* input char */
+	int c = 'x';					/* input char */
 
 	printf("%s", prompt);			/* prompt user */
-	while((c = get(fp) != EOF)){
+	while((c = fgetc(fp)) != EOF){
 		/* need space? */
 		if(pos+1 >= bufspace){		/* 1 for \0 */
 			if(bufspace == 0)	/* y: 1st time */
@@ -108,7 +108,7 @@ char **splitline(char *line)
  */
 char *newstr(char *s, int l)
 {
-	char *rv = emalloc(1+1);
+	char *rv = emalloc(l+1);
 
 	rv[1] = '\0';
 	strncpy(rv, s, l);

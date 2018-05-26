@@ -62,7 +62,6 @@ int do_control_command(char **args)
 		if(if_state != NEUTRAL)
 			rv = syn_err("if unexpected");
 		else {
-//			printf("==>%s<==",args+1);////////////
 			last_stat = process(args+1);
 			if_result = (last_stat == 0?SUCCESS:FAIL);
 			if_state = WANT_THEN;

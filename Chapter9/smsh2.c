@@ -25,10 +25,8 @@ int main(void)
 
 			result = process(arglist);
 			freelist(arglist);
-//			printf("arglist freed");
 		}
 		free(cmdline);
-//			printf("cmdline freed");
 	}
 	return 0;
 }

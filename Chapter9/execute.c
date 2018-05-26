@@ -25,6 +25,7 @@ int execute(char *argv[])
 		signal(SIGINT, SIG_DFL);
 		signal(SIGQUIT, SIG_DFL);
 		execvp(argv[0], argv);
+//		printf("-command->%s<--\n", argv[0]);
 		perror("cannot execute command");
 		exit(1);
 	}

@@ -110,7 +110,7 @@ char *newstr(char *s, int l)
 {
 	char *rv = emalloc(l+1);
 
-	rv[1] = '\0';
+	rv[l] = '\0';
 	strncpy(rv, s, l);
 	return rv;
 }
